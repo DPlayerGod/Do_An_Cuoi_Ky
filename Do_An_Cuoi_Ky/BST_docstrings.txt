@@ -1,0 +1,57 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+class Node {
+        Cau truc cua cac nut tren cay tim kiem nhi phan BST
+
+        Thong tin :
+            data (int)      : la gia tri cua nut
+            left (Node)     : mo ta nut con trai cua nut hien tai
+            right (Node)    : mo ta nut con phai cua nut hien tai
+};
+
+class Solution {
+    public:
+
+  		Node* insert(Node* root, int data) {
+                Ham them mot nut mang gia tri data vao cay BST
+
+                Thong tin :
+                    root (Node) : Nut dang xet
+                    data (int)     : Gia tri data can them vao
+
+                Thao tac :
+                    Neu nut hien tai rong, tao nut moi mang gia tri data.
+
+                    Neu data nho hon gia tri nut hien tai thi xet nut con trai.
+
+                    Neu data lon hon gia tri nut hien tai thi xet nut con phai.
+
+                Tra ve nut hien tai
+        }
+
+        int height(Node* root) {
+                Ham tinh do cao cua cay
+
+                Thong tin :
+                    root (Node) : Mo ta nut hien tai
+
+                Thuc hien xet nut trai, nut phai
+
+                Tra ve do cao cua cay con cua root
+        }
+
+};
+
+int main() {
+
+    Solution myTree;
+    Node* root = NULL;
+
+    int t;
+    // so nut t
+}
+
+
+

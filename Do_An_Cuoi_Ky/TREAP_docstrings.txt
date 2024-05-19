@@ -1,0 +1,138 @@
+int Rand() {
+        Ham de sinh cac so ngau nhien trong doan [l, r]
+
+        Thong tin :
+            l (int) : 1
+            r (int) : 10^9
+
+        Tra ve so duoc sinh ngau nhien trong doan [l, r].
+}
+
+class Node {
+        Cau truc cua cac nut tren cay tim kiem nhi phan ngau nhien Treap
+
+        Thong tin :
+            data (int)      : la gia tri cua nut
+            priority (int)  : gia tri cua khoa Heap tren nut do, duoc sinh ngau nhien bang ham Rand()
+            left (Node)     : mo ta nut con trai cua nut hien tai
+            right (Node)    : mo ta nut con phai cua nut hien tai
+};
+
+class Solution {
+    public:
+        Node *rotate_right(Node *node) {
+                Ham xoay cay sang phai voi nut dang xet
+
+                Thong tin:
+                    node (Node) : Nut can xoay phai
+                    x (Node)    : Luu nut con trai cua node
+                    t (Node)    : Luu nut con phai cua x
+
+                Thao tac:
+                    Gan nut con phai cua x thanh node
+                    Gan nut con trai cua node thanh t.
+
+                Tra ve x.
+        }
+
+        Node *rotate_left(Node *node) {
+                Ham xoay cay sang trai voi nut dang xet
+
+                Thong tin:
+                    node (Node) : Nut can xoay trai
+                    x (Node)    : Luu nut con phai cua node
+                    t (Node)    : Luu nut con trai cua x
+
+                Thao tac:
+                    Gan nut con trai cua x thanh node
+                    Gan nut con phai cua node thanh t
+
+                Tra ve x
+        }
+
+
+        Node* insert(Node* root, int x) {
+                Ham them mot nut mang gia tri x vao cay Treap
+
+                Thong tin :
+                    root (Node) : Nut dang xet
+                    x (int)     : Gia tri x can them vao
+
+                Thao tac :
+                    Neu nut hien tai rong, tao nut moi mang gia tri x.
+
+                    Neu x nho hon gia tri nut hien tai thi xet nut con trai:
+                        Sau khi them nut moi o nut con trai ma nut root hien tai
+                        bi vi pham tinh chat khoa Heap thi xoay phai cay.
+
+                    Neu x lon hon gia tri nut hien tai thi xet nut con phai:
+                        Sau khi them nut moi o nut con phai ma nut root hien tai
+                        bi vi pham tinh chat khoa Heap thi xoay trai cay.
+
+                Tra ve nut hien tai
+        }
+
+        Node* deleteNode(Node* root, int x) {
+                Ham xoa mot nut mang gia tri x tren cay Treap
+
+                Thong tin :
+                    root (Node) : Nut dang xet
+                    x (int)     : Gia tri cua nut can xoa
+
+                Thao tac:
+                    Neu root la rong thi ta bo qua.
+
+                    Neu gia tri x khong o root:
+                        Neu x nho hon gia tri nut root, xet nut con trai cua root
+                        Neu x lon hon gia tri nut root, xet nut con phai cua root
+
+                    Nguoc lai, neu x dang o root :
+
+                        Truong hop 1 : root khong co nut con trai:
+                            Xoa root ra khoi cay va xet nut con phai
+
+                        Truong hop 2 : root khong co nut con phai:
+                            Xoa root ra khoi cay va xet nut con trai
+
+                        Truong hop 3 : root co ca nut con trai va phai:
+                            Xet nut con trai, nut con phai cua root va thuc hien xoay cay
+
+                 Tra ve nut hien tai.
+        }
+
+
+		Node *find(Node *root, int x) {
+                Ham tra ve nut mang gia tri x.
+
+                Thong tin:
+                    root (Node) : Mo ta nut hien tai.
+                    x (int)     : Gia tri tren nut can tim.
+
+                Thuc hien:
+                    Neu nut hien tai co gia tri nho hon x chuyen sang nut con trai.
+                    Nguoc lai, nut hien tai co gia tri lon hon x chuyen sang nut con phai.
+
+                Khi tim duoc tra ve nut root hien tai.
+        }
+
+
+
+        int height(Node* root) {
+                Ham tinh do cao cua cay
+
+                Thong tin :
+                    root (Node) : Mo ta nut hien tai
+
+                Thuc hien xet nut trai, nut phai
+
+                Tra ve do cao cua cay con cua root
+        }
+};
+
+int main() {
+
+    Solution myTree;
+    Node* root = NULL;
+
+    int t; // so nut cua cay
+}
